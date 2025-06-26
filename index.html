@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PromptGenius - AI-Powered Prompt Optimization</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <meta name="theme-color" content="#ffffff"> <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,10 +49,10 @@
     <header class="py-4 px-4 sm:px-6 lg:px-8 border-b border-gray-200 sticky top-0 bg-white/80 backdrop-blur-sm z-10">
         <nav class="flex items-center justify-between max-w-7xl mx-auto">
             <div class="flex items-center space-x-3">
-                 <img src="PromptGenius_1400_560.png" alt="PromptGenius Logo" class="h-10 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/200x80/FFFFFF/111827?text=PromptGenius';">
+                <img src="/PromptGenius_1400_560.png" alt="PromptGenius Logo" class="h-10 w-auto">
             </div>
 
-            <a href="#" id="chrome-store-link-header" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2">
+            <a href="https://chromewebstore.google.com/detail/promptgenius/lmpjbngkepccmecmcfokcggaedkpljdh" id="chrome-store-link-header" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2" target="_blank" rel="noopener noreferrer">
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"><title>Google Chrome</title><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-4-8a4 4 0 118 0 4 4 0 01-8 0z"/><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6z"/></svg>
                 <span>Add to Chrome</span>
             </a>
@@ -58,7 +62,7 @@
     <main>
         <section class="pt-16 pb-20 sm:pt-24 sm:pb-28 text-center">
             <div class="max-w-5xl mx-auto px-4">
-                <img src="PromptGenius_1400_560.png" alt="PromptGenius Logo" class="h-44 sm:h-52 mx-auto mb-8" onerror="this.onerror=null;this.src='https://placehold.co/400x160/FFFFFF/111827?text=PromptGenius';">
+                <img src="/PromptGenius_1400_560.png" alt="PromptGenius Logo" class="h-44 sm:h-52 mx-auto mb-8">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
                     Unlock Superior AI Results with
                     <span class="gradient-text">PromptGenius</span>
@@ -67,7 +71,7 @@
                     PromptGenius is a powerful, language model-agnostic Chrome extension that helps you optimize your AI prompts to get the best possible outcomes from Gemini, GPT, Claude, and Copilot.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="#" id="chrome-store-link-main" class="w-full sm:w-auto bg-sky-600 text-white font-bold py-3 px-8 rounded-lg text-lg btn-glow flex items-center justify-center hover:bg-sky-700">
+                    <a href="https://chromewebstore.google.com/detail/promptgenius/lmpjbngkepccmecmcfokcggaedkpljdh" id="chrome-store-link-main" class="w-full sm:w-auto bg-sky-600 text-white font-bold py-3 px-8 rounded-lg text-lg btn-glow flex items-center justify-center hover:bg-sky-700" target="_blank" rel="noopener noreferrer">
                         Get PromptGenius for Free
                     </a>
                 </div>
@@ -118,10 +122,8 @@
     </footer>
 
     <script>
-        // IMPORTANT: Once your Chrome extension is live, replace this placeholder with the actual URL.
         const chromeStoreUrl = 'https://chromewebstore.google.com/detail/promptgenius/lmpjbngkepccmecmcfokcggaedkpljdh';
 
-        // Update all Chrome Store links on the page
         document.getElementById('chrome-store-link-header').href = chromeStoreUrl;
         document.getElementById('chrome-store-link-main').href = chromeStoreUrl;
     </script>
