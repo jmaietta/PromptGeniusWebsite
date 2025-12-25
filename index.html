@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
     <title>PromptGenius - AI-Powered Prompt Optimization</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -52,19 +53,31 @@
             transform: translateY(-2px);
             box-shadow: 0 0 15px rgba(2, 132, 199, 0.3), 0 0 30px rgba(79, 70, 229, 0.2);
         }
+
+        /* Mobile polish */
+        html, body { width: 100%; overflow-x: hidden; }
+        img, svg, video, canvas { max-width: 100%; height: auto; }
+        a, button { touch-action: manipulation; }
+        /* Avoid layout breaks from long strings/URLs */
+        body { overflow-wrap: anywhere; word-break: break-word; }
+        /* Respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto !important; }
+            *, *::before, *::after { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <header class="py-4 px-4 sm:px-6 lg:px-8 border-b border-gray-200 sticky top-0 bg-white/80 backdrop-blur-sm z-10">
-        <nav class="flex items-center justify-between max-w-7xl mx-auto">
-            <div class="flex items-center space-x-3">
+        <nav class="flex flex-wrap items-center justify-between gap-3 max-w-7xl mx-auto">
+            <div class="flex items-center space-x-3 min-w-0">
                 <img src="/PromptGenius_1400_560.png" alt="PromptGenius Logo" class="h-10 w-auto">
             </div>
 
-            <a href="https://chromewebstore.google.com/detail/promptgenius/lmpjbngkepccmecmcfokcggaedkpljdh" id="chrome-store-link-header" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2" target="_blank" rel="noopener noreferrer">
+            <a href="https://chromewebstore.google.com/detail/promptgenius/lmpjbngkepccmecmcfokcggaedkpljdh" id="chrome-store-link-header" class="bg-blue-600 text-white font-semibold py-2 px-3 sm:px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2 whitespace-nowrap text-sm sm:text-base shrink-0" target="_blank" rel="noopener noreferrer">
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"><title>Google Chrome</title><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-4-8a4 4 0 118 0 4 4 0 01-8 0z"/><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6z"/></svg>
-                <span>Add to Chrome</span>
+                <span class="sm:hidden">Add</span><span class="hidden sm:inline">Add to Chrome</span>
             </a>
         </nav>
     </header>
@@ -72,7 +85,7 @@
     <main>
         <section class="pt-16 pb-20 sm:pt-24 sm:pb-28 text-center">
             <div class="max-w-5xl mx-auto px-4">
-                <img src="/PromptGenius_1400_560.png" alt="PromptGenius Logo" class="h-44 sm:h-52 mx-auto mb-8">
+                <img src="/PromptGenius_1400_560.png" alt="PromptGenius Logo" class="h-32 sm:h-44 md:h-52 mx-auto mb-8">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
                     Unlock Superior AI Results with
                     <span class="gradient-text">PromptGenius</span>
