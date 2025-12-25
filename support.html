@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
     <title>Support - PromptGenius</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -45,18 +46,30 @@
             transform: translateY(-2px);
             box-shadow: 0 0 15px rgba(2, 132, 199, 0.3), 0 0 30px rgba(79, 70, 229, 0.2);
         }
+
+        /* Mobile polish */
+        html, body { width: 100%; overflow-x: hidden; }
+        img, svg, video, canvas { max-width: 100%; height: auto; }
+        a, button { touch-action: manipulation; }
+        /* Avoid layout breaks from long strings/URLs */
+        body { overflow-wrap: anywhere; word-break: break-word; }
+        /* Respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto !important; }
+            *, *::before, *::after { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <header class="py-4 px-4 sm:px-6 lg:px-8 border-b border-gray-200 sticky top-0 bg-white/80 backdrop-blur-sm z-10">
-        <nav class="flex items-center justify-between max-w-7xl mx-auto">
+        <nav class="flex flex-wrap items-center justify-between gap-3 max-w-7xl mx-auto">
             <a href="/" class="flex items-center space-x-3">
                 <img src="/PromptGenius_1400_560.png" alt="PromptGenius Logo" class="h-10 w-auto">
             </a>
-            <a href="https://chromewebstore.google.com/detail/promptgenius/lmpjbngkepccmecmcfokcggaedkpljdh" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2" target="_blank" rel="noopener noreferrer">
+            <a href="https://chromewebstore.google.com/detail/promptgenius/lmpjbngkepccmecmcfokcggaedkpljdh" class="bg-blue-600 text-white font-semibold py-2 px-3 sm:px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2 whitespace-nowrap text-sm sm:text-base shrink-0" target="_blank" rel="noopener noreferrer">
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor"><title>Google Chrome</title><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-4-8a4 4 0 118 0 4 4 0 01-8 0z"/><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6z"/></svg>
-                <span>Add to Chrome</span>
+                <span class="sm:hidden">Add</span><span class="hidden sm:inline">Add to Chrome</span>
             </a>
         </nav>
     </header>
@@ -132,7 +145,7 @@
                     Can't find what you're looking for? Our team is happy to assist you with any questions or issues.
                 </p>
                 <div class="mt-8">
-                    <a href="mailto:info@tek2day.com?subject=PromptGenius%20Support%20Request" class="inline-flex items-center justify-center bg-sky-600 text-white font-bold py-3 px-8 rounded-lg text-lg btn-glow hover:bg-sky-700">
+                    <a href="mailto:info@tek2day.com?subject=PromptGenius%20Support%20Request" class="inline-flex items-center justify-center w-full sm:w-auto bg-sky-600 text-white font-bold py-3 px-8 rounded-lg text-lg btn-glow hover:bg-sky-700">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                         </svg>
